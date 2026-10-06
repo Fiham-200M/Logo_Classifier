@@ -1,0 +1,76 @@
+# Multi-Modal Anti-Spoofing Forensics & Website Intelligence Engine Configuration
+# Centralized thresholds for all evidence modalities and website analytics
+
+screening:
+  phash_match_threshold: 4      # Hamming distance <= 4 considered potential exact/near match
+  dhash_match_threshold: 6      # Difference hash distance <= 6
+  top_k_candidates: 5           # Number of candidate brands to shortlist
+
+siglip:
+  strong_match: 0.92            # Calibrated for SO400M 384 (was 0.88 for Base 224)
+  suspicious: 0.83              # Below this, brand relationship becomes questionable (was 0.80)
+  unknown: 0.55                 # Below this, logo is unrelated/unknown (was 0.50)
+
+dinov2:
+  strong_match: 0.88            # DINOv2 structural/spatial geometry strong match
+  suspicious: 0.80              # High SigLIP with DINOv2 < 0.80 indicates altered geometry / redraw
+  geometry_drift_threshold: 0.08 # If (SigLIP - DINOv2) > 0.08, suspect redrawn font or modified layout
+
+classifier:
+  strong_confidence: 0.90       # High classifier confidence
+  unknown_threshold: 0.12       # Threshold above which sample is flagged unknown/negative
+
+color:
+  delta_e_match: 3.5            # CIE LAB Delta E 2000 <= 3.5 considered authentic color match
+  delta_e_review: 7.0           # Delta E > 7.0 triggers color spoof review
+  histogram_match: 0.70         # HSV color histogram intersection >= 0.70
+  histogram_review: 0.55        # HSV color histogram intersection < 0.55 triggers review
+
+edge:
+  strong_match: 0.72            # Sub-pixel dilated edge stroke IoU >= 0.72
+  suspicious: 0.55              # Edge stroke IoU < 0.55 triggers VECTOR_REDRAW / structural review
+  critical_mismatch: 0.40       # IoU < 0.40 indicates severely altered typography or graphics
+
+ocr:
+  fuzzy_match_threshold: 0.82   # Normalized Levenshtein similarity for brand name match
+  min_confidence: 0.40          # Minimum OCR character detection confidence threshold
+
+vlm:
+  enabled: true
+  model: "qwen2.5vl:7b"
+  url: "http://localhost:11434/api/generate"
+  timeout_seconds: 45
+  trigger_on_ambiguity_only: true # VLM only runs on shortlist candidates / suspicious cases
+
+decision:
+  high_confidence_match_score: 0.88
+  review_score_threshold: 0.65
+  min_margin: 0.10
+  require_multimodal_evidence: true
+
+website_intelligence:
+  enabled: true
+  min_category_confidence: 0.60
+  gambling_keywords:
+    - casino
+    - slot
+    - slots
+    - jackpot
+    - judi
+    - deposit
+    - withdraw
+    - wd
+    - dp
+    - rtp
+    - gacor
+    - taruhan
+    - poker
+    - roulette
+    - baccarat
+    - sportsbook
+    - togel
+    - bonus
+    - member
+    - cashback
+    - rollongan
+    - rollingan

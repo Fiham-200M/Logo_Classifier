@@ -1,0 +1,65 @@
+{
+  "brand_id": "surgavip88",
+  "verdict": "MATCH",
+  "confidence_score": 1.0,
+  "asset_type": "favicon",
+  "matched_reference": "039_singkat.surgavip88-masuk.com_favicon.png",
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": true,
+    "width": 192,
+    "height": 192
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 0,
+    "dhash_hamming_distance": 0,
+    "siglip2_semantic_score": 1.0,
+    "dinov2_geometry_score": 1.0,
+    "cielab_delta_e": 0.5,
+    "edge_stroke_iou": 1.0,
+    "ocr_text_match": true
+  },
+  "ocr": {
+    "detected_text": [
+      "SURGAVIP",
+      "88"
+    ],
+    "normalized_text": "SURGAVIP 88",
+    "confidence": 0.9877
+  },
+  "micro_differences_detected": [
+    "None detected; consistent with official reference"
+  ],
+  "threat_type": "EXACT_REPLICA",
+  "action_reason": "High-confidence multi-modal consensus confirming authentic official favicon 'surgavip88' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.5).",
+  "candidate_brands": [
+    {
+      "brand_id": "surgavip88",
+      "siglip": 1.0,
+      "phash_dist": 0
+    },
+    {
+      "brand_id": "surgavip",
+      "siglip": 0.832,
+      "phash_dist": 35
+    },
+    {
+      "brand_id": "surga88",
+      "siglip": 0.7964,
+      "phash_dist": 33
+    },
+    {
+      "brand_id": "sgcwin88",
+      "siglip": 0.7214,
+      "phash_dist": 35
+    },
+    {
+      "brand_id": "surga99",
+      "siglip": 0.7192,
+      "phash_dist": 35
+    }
+  ],
+  "processing_time_sec": 1.442
+}

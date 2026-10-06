@@ -1,0 +1,62 @@
+{
+  "brand_id": "top111",
+  "verdict": "MATCH",
+  "confidence_score": 0.95,
+  "asset_type": "favicon",
+  "matched_reference": "047_tertop111.com_favicon.png",
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": true,
+    "width": 32,
+    "height": 32
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 0,
+    "dhash_hamming_distance": 0,
+    "siglip2_semantic_score": 1.0,
+    "dinov2_geometry_score": 1.0,
+    "cielab_delta_e": 0.5,
+    "edge_stroke_iou": 1.0,
+    "ocr_text_match": false
+  },
+  "ocr": {
+    "detected_text": [],
+    "normalized_text": "",
+    "confidence": 0.0
+  },
+  "micro_differences_detected": [
+    "None detected; consistent with official reference"
+  ],
+  "threat_type": "EXACT_REPLICA",
+  "action_reason": "High-confidence multi-modal consensus confirming authentic official favicon 'top111' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.5).",
+  "candidate_brands": [
+    {
+      "brand_id": "top111",
+      "siglip": 1.0,
+      "phash_dist": 0
+    },
+    {
+      "brand_id": "tiket200",
+      "siglip": 0.7697,
+      "phash_dist": 28
+    },
+    {
+      "brand_id": "tiket300",
+      "siglip": 0.7658,
+      "phash_dist": 28
+    },
+    {
+      "brand_id": "pasti200m",
+      "siglip": 0.7443,
+      "phash_dist": 30
+    },
+    {
+      "brand_id": "super89",
+      "siglip": 0.7415,
+      "phash_dist": 24
+    }
+  ],
+  "processing_time_sec": 0.343
+}

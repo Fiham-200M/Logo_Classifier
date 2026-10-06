@@ -1,0 +1,64 @@
+{
+  "brand_id": "a200m",
+  "verdict": "REVIEW",
+  "confidence_score": 0.9185,
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": false,
+    "width": 320,
+    "height": 70
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 10,
+    "dhash_hamming_distance": 12,
+    "siglip2_semantic_score": 0.9408,
+    "dinov2_geometry_score": 1.0,
+    "cielab_delta_e": 13.56,
+    "edge_stroke_iou": 0.7474,
+    "ocr_text_match": true
+  },
+  "ocr": {
+    "detected_text": [
+      "A200N",
+      "20OMGROUP"
+    ],
+    "normalized_text": "A200N 20OMGROUP",
+    "confidence": 0.9553
+  },
+  "micro_differences_detected": [
+    "Color palette shift: CIE LAB Delta E = 13.6 (Histogram overlap = 0.85)",
+    "Structural edge injection: 26.5% new graphic strokes detected"
+  ],
+  "threat_type": "COLOR_SPOOF",
+  "action_reason": "Candidate logo structure matches 'a200m', but exhibits significant color drift (Delta E=13.6). Possible recolored spoof.",
+  "candidate_brands": [
+    {
+      "brand_id": "a200m",
+      "siglip": 0.9408,
+      "phash_dist": 10
+    },
+    {
+      "brand_id": "p200m",
+      "siglip": 0.8577,
+      "phash_dist": 30
+    },
+    {
+      "brand_id": "d200m",
+      "siglip": 0.8571,
+      "phash_dist": 22
+    },
+    {
+      "brand_id": "g200m",
+      "siglip": 0.8513,
+      "phash_dist": 31
+    },
+    {
+      "brand_id": "f200m",
+      "siglip": 0.8508,
+      "phash_dist": 32
+    }
+  ],
+  "processing_time_sec": 16.098
+}

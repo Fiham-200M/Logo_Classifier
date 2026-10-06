@@ -1,0 +1,63 @@
+{
+  "brand_id": "a200m",
+  "verdict": "MATCH",
+  "confidence_score": 0.9886,
+  "preprocessing_meta": {
+    "file_format": "GIF",
+    "is_animated": true,
+    "frames_processed": 4,
+    "alpha_channel_detected": false,
+    "width": 320,
+    "height": 70
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 7,
+    "dhash_hamming_distance": 0,
+    "siglip2_semantic_score": 0.9878,
+    "dinov2_geometry_score": 1.0,
+    "cielab_delta_e": 0.86,
+    "edge_stroke_iou": 0.9682,
+    "ocr_text_match": true
+  },
+  "ocr": {
+    "detected_text": [
+      "A200M",
+      "20OMGROUP"
+    ],
+    "normalized_text": "A200M 20OMGROUP",
+    "confidence": 0.9908
+  },
+  "micro_differences_detected": [
+    "None detected; consistent with official reference"
+  ],
+  "threat_type": "EXACT_REPLICA",
+  "action_reason": "High-confidence multi-modal consensus confirming authentic official logo 'a200m' (SigLIP=0.988, DINOv2=1.000, Edge IoU=0.968, Delta E=0.9).",
+  "candidate_brands": [
+    {
+      "brand_id": "a200m",
+      "siglip": 0.9878,
+      "phash_dist": 7
+    },
+    {
+      "brand_id": "d200m",
+      "siglip": 0.9084,
+      "phash_dist": 19
+    },
+    {
+      "brand_id": "p200m",
+      "siglip": 0.9016,
+      "phash_dist": 29
+    },
+    {
+      "brand_id": "b200m",
+      "siglip": 0.8939,
+      "phash_dist": 27
+    },
+    {
+      "brand_id": "k200m",
+      "siglip": 0.8892,
+      "phash_dist": 28
+    }
+  ],
+  "processing_time_sec": 1.958
+}

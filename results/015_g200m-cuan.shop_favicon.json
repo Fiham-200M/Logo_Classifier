@@ -1,0 +1,62 @@
+{
+  "brand_id": "g200m",
+  "verdict": "REVIEW",
+  "confidence_score": 0.9052,
+  "asset_type": "favicon",
+  "matched_reference": "015_g200m-cuan.shop_favicon.png",
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": true,
+    "width": 45,
+    "height": 45
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 0,
+    "dhash_hamming_distance": 0,
+    "siglip2_semantic_score": 1.0,
+    "dinov2_geometry_score": 1.0,
+    "cielab_delta_e": 0.11,
+    "edge_stroke_iou": 0.7013,
+    "ocr_text_match": false
+  },
+  "ocr": {
+    "detected_text": [],
+    "normalized_text": "",
+    "confidence": 0.0
+  },
+  "micro_differences_detected": [
+    "Structural edge injection: 17.1% new graphic strokes detected"
+  ],
+  "threat_type": "ELEMENT_INJECTION",
+  "action_reason": "Candidate matches 'g200m' overall, but auxiliary graphic/icon modifications were detected. Possible altered spoof.",
+  "candidate_brands": [
+    {
+      "brand_id": "g200m",
+      "siglip": 1.0,
+      "phash_dist": 0
+    },
+    {
+      "brand_id": "sgcwin",
+      "siglip": 0.854,
+      "phash_dist": 29
+    },
+    {
+      "brand_id": "p200m",
+      "siglip": 0.8349,
+      "phash_dist": 23
+    },
+    {
+      "brand_id": "d200m",
+      "siglip": 0.8265,
+      "phash_dist": 27
+    },
+    {
+      "brand_id": "sgcvip",
+      "siglip": 0.8189,
+      "phash_dist": 23
+    }
+  ],
+  "processing_time_sec": 0.335
+}

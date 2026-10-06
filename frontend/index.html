@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>200M LOGO CLASSIFIER // Brand Protection & Anti-Counterfeit Vision Studio</title>
+  <meta name="description" content="200M Logo Classifier: Sub-pixel multi-modal AI logo and favicon verification engine utilizing SigLIP 2, DINOv2, CIE LAB Delta E, and Canny Edge Analysis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-bottom-center"></div>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-identity">
+        <div class="brand-symbol">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>200M <span>LOGO CLASSIFIER</span></h1>
+          <p class="brand-sub">Multi-Modal Brand Protection & Anti-Counterfeit Vision Studio</p>
+        </div>
+      </div>
+
+      <div class="header-status">
+        <div class="status-pill" id="system-status">
+          <span class="status-dot"></span>
+          <span class="status-label" id="status-label">Initializing Models...</span>
+        </div>
+        <button id="btn-browse-brands" class="btn-ghost" title="View all protected official brands">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Protected Brands (<span id="protected-count">52</span>)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main App Shell -->
+  <main class="app-main">
+    <div class="main-container">
+
+      <!-- Navigation / Workspace Mode Switcher -->
+      <section class="mode-navigation">
+        <div class="mode-switcher-container">
+          <div class="mode-pills">
+            <button class="mode-pill active" id="btn-mode-logo" data-view="logo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+              Brand Logo Station
+            </button>
+            <button class="mode-pill" id="btn-mode-favicon" data-view="favicon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>
+              Favicon & Micro-Icon Station
+            </button>
+            <button class="mode-pill" id="btn-mode-screenshot" data-view="screenshot">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              Webpage Screenshot Station
+            </button>
+            <button class="mode-pill" id="btn-mode-dual" data-view="dual">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="8" height="18" x="3" y="3" rx="1"/><rect width="8" height="18" x="13" y="3" rx="1"/></svg>
+              Dual Station View
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Separate Upload Stations Grid -->
+      <section class="upload-stations-grid view-mode-logo" id="upload-stations-wrapper">
+        
+        <!-- STATION 1: BRAND LOGO UPLOADER -->
+        <div class="upload-station-card glass-panel" id="station-logo">
+          <div class="station-header">
+            <div class="station-identity">
+              <div class="station-icon icon-logo">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+              </div>
+              <div>
+                <h2 class="station-title">Brand Logo Verifier</h2>
+                <p class="station-desc">Inspect primary banners, headers, watermarks, typography & redraw threats</p>
+              </div>
+            </div>
+            <span class="station-badge badge-logo">ASSET MODE: FULL LOGO</span>
+          </div>
+
+          <!-- Logo Drop Zone -->
+          <div class="drop-zone" id="logo-drop-zone">
+            <input type="file" id="logo-file-input" accept="image/*" class="file-input-hidden">
+            <div class="drop-zone-content">
+              <div class="drop-icon drop-icon-logo">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="17 8 12 3 7 8"/>
+                  <line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+              </div>
+              <div class="drop-primary-text">
+                <strong>Drag & drop Brand Logo</strong> or <button type="button" class="btn-link" id="btn-browse-logo">browse files</button>
+              </div>
+              <div class="drop-sub-text">PNG, JPG, WEBP, GIF &bull; Transparent, dark/light canvas &bull; Paste <kbd>Ctrl+V</kbd></div>
+            </div>
+          </div>
+
+          <!-- Logo Presets Ribbon -->
+          <div class="station-presets-box">
+            <div class="presets-label">⚡ Logo Test Presets:</div>
+            <div class="sample-chips" id="logo-sample-chips">
+              <div class="sample-chip skeleton-chip">Loading logo samples...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATION 2: FAVICON UPLOADER -->
+        <div class="upload-station-card glass-panel" id="station-favicon">
+          <div class="station-header">
+            <div class="station-identity">
+              <div class="station-icon icon-favicon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>
+              </div>
+              <div>
+                <h2 class="station-title">Favicon & Micro-Icon Verifier</h2>
+                <p class="station-desc">Inspect browser tab icons, bookmarks, mobile shortcuts & 16x16 / 32x32 emblems</p>
+              </div>
+            </div>
+            <span class="station-badge badge-favicon">ASSET MODE: FAVICON</span>
+          </div>
+
+          <!-- Favicon Drop Zone -->
+          <div class="drop-zone" id="fav-drop-zone">
+            <input type="file" id="fav-file-input" accept="image/*" class="file-input-hidden">
+            <div class="drop-zone-content">
+              <div class="drop-icon drop-icon-fav">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                  <line x1="4" x2="4" y1="22" y2="15"/>
+                </svg>
+              </div>
+              <div class="drop-primary-text">
+                <strong>Drag & drop Favicon / Tab Icon</strong> or <button type="button" class="btn-link" id="btn-browse-fav">browse files</button>
+              </div>
+              <div class="drop-sub-text">16x16, 32x32, 48x48, 64x64, 128x128 &bull; PNG, ICO, WEBP &bull; Paste <kbd>Ctrl+V</kbd></div>
+            </div>
+          </div>
+
+          <!-- Favicon Presets Ribbon -->
+          <div class="station-presets-box">
+            <div class="presets-label">⚡ Favicon Test Presets:</div>
+            <div class="sample-chips" id="fav-sample-chips">
+              <div class="sample-chip skeleton-chip">Loading favicon samples...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATION 3: WEBPAGE SCREENSHOT UPLOADER -->
+        <div class="upload-station-card glass-panel" id="station-screenshot">
+          <div class="station-header">
+            <div class="station-identity">
+              <div class="station-icon icon-screenshot" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              </div>
+              <div>
+                <h2 class="station-title">Webpage Screenshot Scanner</h2>
+                <p class="station-desc">Scan entire webpage captures to detect, crop and locate our protected brand logos automatically</p>
+              </div>
+            </div>
+            <span class="station-badge badge-screenshot" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);">ASSET MODE: FULL SCREENSHOT</span>
+          </div>
+
+          <!-- Screenshot Drop Zone -->
+          <div class="drop-zone" id="screenshot-drop-zone">
+            <input type="file" id="screenshot-file-input" accept="image/*" class="file-input-hidden">
+            <div class="drop-zone-content">
+              <div class="drop-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="17 8 12 3 7 8"/>
+                  <line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+              </div>
+              <div class="drop-primary-text">
+                <strong>Drag & drop Webpage Screenshot</strong> or <button type="button" class="btn-link" id="btn-browse-screenshot">browse files</button>
+              </div>
+              <div class="drop-sub-text">Full webpage PNG, JPG, WEBP &bull; Paste <kbd>Ctrl+V</kbd> &bull; Auto-detects & crops logo areas</div>
+            </div>
+          </div>
+
+          <!-- Screenshot Info Box -->
+          <div class="station-presets-box">
+            <div class="presets-label">🔍 Scanner Features:</div>
+            <div class="sample-chips">
+              <span class="sample-chip" style="cursor: default;">⚡ Automatic Header & Banner Scanning</span>
+              <span class="sample-chip" style="cursor: default;">🎯 Multi-Region Bounding Boxes</span>
+              <span class="sample-chip" style="cursor: default;">🛡️ SigLIP 2 & DINOv2 Deep Verification</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Loading State Overlay -->
+      <section class="loading-state" id="loading-state" style="display: none;">
+        <div class="loading-card glass-panel">
+          <div class="scanner-laser"></div>
+          <div class="loading-spinner"></div>
+          <h3 id="loading-stage">Running Deep Multi-Modal Vision Analysis...</h3>
+          <p id="loading-detail">Extracting SigLIP 2, DINOv2 geometry, Canny edge strokes & CIE LAB color profiles on GPU</p>
+        </div>
+      </section>
+
+      <!-- Analysis Results Dashboard -->
+      <section class="results-dashboard" id="results-dashboard" style="display: none;">
+        
+        <!-- Verdict Banner -->
+        <div class="verdict-banner glass-panel" id="verdict-banner">
+          <div class="verdict-left">
+            <div class="verdict-badge-row">
+              <span class="verdict-badge" id="verdict-badge">MATCH</span>
+              <span class="threat-badge" id="threat-badge">EXACT_REPLICA</span>
+              <span class="media-type-badge" id="media-type-badge">LOGO &bull; 320x70</span>
+              <span class="verified-mode-badge" id="verified-mode-badge">VERIFIED AS LOGO</span>
+            </div>
+            <h2 class="verdict-title" id="verdict-title">Official Brand Consensus: <span class="highlight" id="matched-brand-name">a200m</span></h2>
+            <p class="verdict-reason" id="verdict-reason">High-confidence multi-modal consensus confirming authentic official logo.</p>
+            <div class="matched-variant-pill" id="matched-variant-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Matched reference variant: <code id="matched-variant-name">logo_001_pos_bg_dark_gray_00.png</code>
+            </div>
+          </div>
+
+          <div class="verdict-right">
+            <div class="confidence-gauge">
+              <div class="gauge-ring">
+                <svg viewBox="0 0 100 100" class="gauge-svg">
+                  <circle class="gauge-track" cx="50" cy="50" r="42"/>
+                  <circle class="gauge-bar" id="gauge-bar" cx="50" cy="50" r="42" stroke-dasharray="264" stroke-dashoffset="0"/>
+                </svg>
+                <div class="gauge-value">
+                  <span class="gauge-number" id="confidence-number">100%</span>
+                  <span class="gauge-label">CONFIDENCE</span>
+                </div>
+              </div>
+            </div>
+            <div class="latency-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span id="latency-val">0.32s</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Micro-Differences Alert (If threat or review) -->
+        <div class="micro-diffs-alert glass-panel" id="micro-diffs-panel" style="display: none;">
+          <div class="alert-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="alert-content">
+            <h4>Forensic Anomalies & Micro-Differences Flagged</h4>
+            <ul id="micro-diffs-list"></ul>
+          </div>
+        </div>
+
+        <!-- Studio Grid: Visual Comparator + Multi-Modal Forensic Metrics -->
+        <div class="studio-grid">
+
+          <!-- Left Column: Visual Comparator Studio -->
+          <div class="visual-studio-card glass-panel">
+            <div class="card-header">
+              <div class="card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                <h3>Forensic Visual Comparator</h3>
+              </div>
+              <!-- Viewer Tabs -->
+              <div class="viewer-tabs">
+                <button class="vtab active" data-tab="side-by-side" id="tab-side">Side-by-Side</button>
+                <button class="vtab" data-tab="heatmap" id="tab-heat">Diff Heatmap</button>
+                <button class="vtab" data-tab="edges" id="tab-edge">Edge Strokes</button>
+                <button class="vtab" data-tab="ocr-view" id="tab-ocr">OCR Canvas</button>
+              </div>
+            </div>
+
+            <!-- Viewport Container -->
+            <div class="viewport-container">
+              <!-- View 1: Side by Side -->
+              <div class="view-panel active" id="view-side-by-side">
+                <div class="comparator-split">
+                  <div class="compare-pane">
+                    <span class="pane-badge">Candidate Input</span>
+                    <div class="image-stage">
+                      <img id="img-candidate" src="" alt="Candidate logo">
+                    </div>
+                  </div>
+                  <div class="compare-pane">
+                    <span class="pane-badge">Official Reference Variant</span>
+                    <div class="image-stage">
+                      <img id="img-reference" src="" alt="Reference logo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View 2: Diff Heatmap -->
+              <div class="view-panel" id="view-heatmap">
+                <div class="heatmap-wrapper">
+                  <span class="pane-badge">Sub-Pixel Pixel/Stroke Divergence Heatmap (CIE Color & Edge Diff)</span>
+                  <div class="image-stage">
+                    <img id="img-heatmap" src="" alt="Forensic diff heatmap">
+                  </div>
+                  <div class="heatmap-legend">
+                    <span>Identical (Blue)</span>
+                    <div class="legend-bar"></div>
+                    <span>Modified / Injected (Red/Yellow)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View 3: Canny Edge Comparison -->
+              <div class="view-panel" id="view-edges">
+                <div class="comparator-split">
+                  <div class="compare-pane">
+                    <span class="pane-badge">Candidate Canny Strokes</span>
+                    <div class="image-stage dark-bg">
+                      <img id="img-edge-cand" src="" alt="Candidate edges">
+                    </div>
+                  </div>
+                  <div class="compare-pane">
+                    <span class="pane-badge">Reference Official Strokes</span>
+                    <div class="image-stage dark-bg">
+                      <img id="img-edge-ref" src="" alt="Reference edges">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View 4: OCR Canvas -->
+              <div class="view-panel" id="view-ocr-view">
+                <div class="heatmap-wrapper">
+                  <span class="pane-badge">PaddleOCR Token Bounding Detection Canvas</span>
+                  <div class="image-stage">
+                    <img id="img-ocr-vis" src="" alt="OCR visualization">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Forensic Metrics & Modalities -->
+          <div class="metrics-column">
+            
+            <!-- Metrics Grid -->
+            <div class="metrics-grid">
+              
+              <!-- Metric 1: SigLIP 2 -->
+              <div class="metric-card glass-panel">
+                <div class="metric-top">
+                  <span class="metric-name">SigLIP 2 Semantic</span>
+                  <span class="metric-score" id="val-siglip">1.0000</span>
+                </div>
+                <div class="metric-progress">
+                  <div class="progress-bar" id="bar-siglip" style="width: 100%;"></div>
+                </div>
+                <span class="metric-detail" id="detail-siglip">High-dimensional vision-language alignment</span>
+              </div>
+
+              <!-- Metric 2: DINOv2 Geometry -->
+              <div class="metric-card glass-panel">
+                <div class="metric-top">
+                  <span class="metric-name">DINOv2 Geometry</span>
+                  <span class="metric-score" id="val-dinov2">1.0000</span>
+                </div>
+                <div class="metric-progress">
+                  <div class="progress-bar" id="bar-dinov2" style="width: 100%;"></div>
+                </div>
+                <span class="metric-detail" id="detail-dinov2">Spatial & structural geometry similarity</span>
+              </div>
+
+              <!-- Metric 3: CIE LAB Delta E -->
+              <div class="metric-card glass-panel">
+                <div class="metric-top">
+                  <span class="metric-name">CIE LAB Color &Delta;E</span>
+                  <span class="metric-score" id="val-delta-e">0.08</span>
+                </div>
+                <div class="metric-progress">
+                  <div class="progress-bar delta-bar" id="bar-delta-e" style="width: 2%;"></div>
+                </div>
+                <span class="metric-detail" id="detail-delta-e">&Delta;E &le; 5.0 (Imperceptible difference)</span>
+              </div>
+
+              <!-- Metric 4: Edge Stroke IoU -->
+              <div class="metric-card glass-panel">
+                <div class="metric-top">
+                  <span class="metric-name">Edge Stroke IoU</span>
+                  <span class="metric-score" id="val-edge-iou">1.0000</span>
+                </div>
+                <div class="metric-progress">
+                  <div class="progress-bar" id="bar-edge-iou" style="width: 100%;"></div>
+                </div>
+                <span class="metric-detail" id="detail-edge-iou">Canny contour raster alignment</span>
+              </div>
+
+              <!-- Metric 5: OCR Token Consensus -->
+              <div class="metric-card glass-panel">
+                <div class="metric-top">
+                  <span class="metric-name">OCR Text Match</span>
+                  <span class="metric-score badge-pill" id="val-ocr-match">MATCH</span>
+                </div>
+                <div class="ocr-tokens-box">
+                  <div class="token-row"><span>Candidate:</span> <code id="ocr-cand-text">"A200M"</code></div>
+                  <div class="token-row"><span>Official:</span> <code id="ocr-ref-text">"A200M"</code></div>
+                </div>
+              </div>
+
+              <!-- Metric 6: Brand Classifier Neural Defense -->
+              <div class="metric-card glass-panel">
+                <div class="metric-top">
+                  <span class="metric-name">Classifier Defense</span>
+                  <span class="metric-score" id="val-classifier-conf">99.8%</span>
+                </div>
+                <div class="classifier-status-row">
+                  <span class="pred-label">Prediction: <strong id="val-classifier-brand">a200m</strong></span>
+                  <span class="unk-label">Unknown Prob: <strong id="val-classifier-unk">0.00</strong></span>
+                </div>
+                <span class="metric-detail">53-class neural network rejection layer</span>
+              </div>
+
+            </div>
+
+            <!-- Candidate Shortlist & Ranking -->
+            <div class="shortlist-card glass-panel">
+              <div class="card-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <h4>Top Candidate Brand Shortlist</h4>
+              </div>
+              <table class="shortlist-table">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Brand ID</th>
+                    <th>SigLIP Score</th>
+                    <th>pHash Distance</th>
+                  </tr>
+                </thead>
+                <tbody id="shortlist-tbody">
+                  <!-- Dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Website Intelligence Forensic Profile Panel -->
+            <div class="website-intel-card glass-panel" id="website-intel-panel" style="display: none; margin-top: 1.5rem;">
+              <div class="card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                <h4>Website Intelligence & Content Profiler</h4>
+              </div>
+              <div class="intel-content-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 0.8rem;">
+                <div class="intel-box" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1rem;">
+                  <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Category Classification</span>
+                  <div style="margin-top: 0.4rem; display: flex; align-items: baseline; gap: 0.5rem;">
+                    <span id="intel-primary-cat" style="font-size: 1.2rem; font-weight: 700; color: #60a5fa;">Unknown</span>
+                    <span id="intel-cat-conf" style="font-size: 0.85rem; color: var(--text-muted);">(0%)</span>
+                  </div>
+                  <div id="intel-secondaries" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;"></div>
+                  <div id="intel-keywords" style="margin-top: 0.6rem; display: flex; flex-wrap: wrap; gap: 0.3rem;"></div>
+                </div>
+                <div class="intel-box" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1rem;">
+                  <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Page Signals & Visual Context</span>
+                  <div id="intel-signals" style="font-size: 0.85rem; margin-top: 0.4rem; color: var(--text-primary); line-height: 1.5;"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Protected Brands Modal -->
+  <div class="modal-overlay" id="brands-modal" style="display: none;">
+    <div class="modal-card glass-panel">
+      <div class="modal-header">
+        <div class="modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3>Protected Brand Registry (52 Brands)</h3>
+        </div>
+        <button class="modal-close" id="btn-close-modal">&times;</button>
+      </div>
+      <div class="modal-search-bar">
+        <input type="text" id="brand-search-input" placeholder="Search official brands (e.g. a200m, dewi11, asia100)...">
+      </div>
+      <div class="brands-grid" id="brands-modal-grid">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

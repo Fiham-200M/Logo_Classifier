@@ -1,0 +1,64 @@
+{
+  "brand_id": "a200m",
+  "verdict": "REVIEW",
+  "confidence_score": 0.8916,
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": false,
+    "width": 320,
+    "height": 70
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 12,
+    "dhash_hamming_distance": 12,
+    "siglip2_semantic_score": 0.9226,
+    "dinov2_geometry_score": 0.9681,
+    "cielab_delta_e": 4.69,
+    "edge_stroke_iou": 0.6176,
+    "ocr_text_match": true
+  },
+  "ocr": {
+    "detected_text": [
+      "OOM",
+      "A200M",
+      "200MGROUP"
+    ],
+    "normalized_text": "OOM A200M 200MGROUP",
+    "confidence": 0.877
+  },
+  "micro_differences_detected": [
+    "Structural edge injection: 18.3% new graphic strokes detected"
+  ],
+  "threat_type": "ELEMENT_INJECTION",
+  "action_reason": "Candidate matches 'a200m' overall, but auxiliary graphic/icon modifications were detected. Possible altered spoof.",
+  "candidate_brands": [
+    {
+      "brand_id": "a200m",
+      "siglip": 0.9226,
+      "phash_dist": 12
+    },
+    {
+      "brand_id": "d200m",
+      "siglip": 0.8965,
+      "phash_dist": 20
+    },
+    {
+      "brand_id": "b200m",
+      "siglip": 0.8681,
+      "phash_dist": 22
+    },
+    {
+      "brand_id": "p200m",
+      "siglip": 0.8633,
+      "phash_dist": 28
+    },
+    {
+      "brand_id": "k200m",
+      "siglip": 0.8626,
+      "phash_dist": 25
+    }
+  ],
+  "processing_time_sec": 15.293
+}

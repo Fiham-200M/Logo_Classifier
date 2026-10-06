@@ -1,0 +1,76 @@
+{
+  "total_images_evaluated": 282,
+  "total_time_seconds": 1183.19,
+  "throughput_images_per_sec": 0.24,
+  "latency_ms": {
+    "mean": 4195.5,
+    "median": 2753.3,
+    "p95": 12343.1,
+    "p99": 19191.5,
+    "min": 390.4,
+    "max": 43213.1
+  },
+  "overall_accuracy_pct": 73.76,
+  "category_metrics": {
+    "OFFICIAL_LOGO": {
+      "total": 52,
+      "correct": 47,
+      "accuracy_pct": 90.38,
+      "mean_latency_ms": 4456.0,
+      "mean_siglip": 1.0,
+      "mean_dinov2": 1.0,
+      "mean_delta_e": 0.16,
+      "mean_edge_iou": 0.9764
+    },
+    "OFFICIAL_FAVICON": {
+      "total": 46,
+      "correct": 45,
+      "accuracy_pct": 97.83,
+      "mean_latency_ms": 1195.1,
+      "mean_siglip": 1.0,
+      "mean_dinov2": 1.0,
+      "mean_delta_e": 0.18,
+      "mean_edge_iou": 0.9762
+    },
+    "POSITIVE_BG_VARIANT": {
+      "total": 48,
+      "correct": 40,
+      "accuracy_pct": 83.33,
+      "mean_latency_ms": 4069.1,
+      "mean_siglip": 1.0,
+      "mean_dinov2": 1.0,
+      "mean_delta_e": 0.21,
+      "mean_edge_iou": 0.9748
+    },
+    "POSITIVE_PAD_VARIANT": {
+      "total": 48,
+      "correct": 40,
+      "accuracy_pct": 83.33,
+      "mean_latency_ms": 4449.6,
+      "mean_siglip": 1.0,
+      "mean_dinov2": 1.0,
+      "mean_delta_e": 0.18,
+      "mean_edge_iou": 0.9794
+    },
+    "THREAT_CANDIDATE": {
+      "total": 28,
+      "correct": 23,
+      "accuracy_pct": 82.14,
+      "mean_latency_ms": 5598.6,
+      "mean_siglip": 0.8808,
+      "mean_dinov2": 0.7382,
+      "mean_delta_e": 10.19,
+      "mean_edge_iou": 0.4803
+    },
+    "COMPETITOR_NEGATIVE": {
+      "total": 60,
+      "correct": 13,
+      "accuracy_pct": 21.67,
+      "mean_latency_ms": 5512.9,
+      "mean_siglip": 0.8958,
+      "mean_dinov2": 0.7757,
+      "mean_delta_e": 19.02,
+      "mean_edge_iou": 0.6743
+    }
+  }
+}

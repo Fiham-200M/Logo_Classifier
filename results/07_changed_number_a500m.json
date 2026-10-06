@@ -1,0 +1,64 @@
+{
+  "brand_id": "a200m",
+  "verdict": "REVIEW",
+  "confidence_score": 0.8111,
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": false,
+    "width": 320,
+    "height": 70
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 12,
+    "dhash_hamming_distance": 12,
+    "siglip2_semantic_score": 0.8972,
+    "dinov2_geometry_score": 0.9681,
+    "cielab_delta_e": 4.69,
+    "edge_stroke_iou": 0.6732,
+    "ocr_text_match": false
+  },
+  "ocr": {
+    "detected_text": [
+      "OOM",
+      "A500M",
+      "200MGROUP"
+    ],
+    "normalized_text": "OOM A500M 200MGROUP",
+    "confidence": 0.877
+  },
+  "micro_differences_detected": [
+    "Alphanumeric token collision: Detected 'A500M' vs official 'A200M'"
+  ],
+  "threat_type": "NUMBER_COLLISION",
+  "action_reason": "Candidate visual identity matches 'a200m', but alphanumeric text differs ('OOM A500M 200MGROUP' vs 'A200M 20OMGROUP'). Suspicious brand squatter/clone.",
+  "candidate_brands": [
+    {
+      "brand_id": "a200m",
+      "siglip": 0.8972,
+      "phash_dist": 12
+    },
+    {
+      "brand_id": "d200m",
+      "siglip": 0.8896,
+      "phash_dist": 20
+    },
+    {
+      "brand_id": "c200m",
+      "siglip": 0.8628,
+      "phash_dist": 16
+    },
+    {
+      "brand_id": "b200m",
+      "siglip": 0.8594,
+      "phash_dist": 22
+    },
+    {
+      "brand_id": "g200m",
+      "siglip": 0.8533,
+      "phash_dist": 27
+    }
+  ],
+  "processing_time_sec": 14.932
+}

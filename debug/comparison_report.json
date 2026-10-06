@@ -1,0 +1,70 @@
+{
+  "brand_id": "a200m",
+  "verdict": "MATCH",
+  "confidence_score": 1.0,
+  "asset_type": "logo",
+  "media_type": "logo",
+  "matched_reference": "a200m.png",
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": false,
+    "width": 320,
+    "height": 70
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 0,
+    "dhash_hamming_distance": 0,
+    "siglip2_semantic_score": 1.0,
+    "dinov2_geometry_score": 1.0,
+    "cielab_delta_e": 0.1,
+    "edge_stroke_iou": 1.0,
+    "ocr_text_match": true,
+    "classifier_predicted_brand": "a200m",
+    "classifier_confidence": 0.4621,
+    "classifier_is_unknown": false,
+    "classifier_unknown_prob": 0.3407
+  },
+  "ocr": {
+    "detected_text": [
+      "A200M",
+      "20OMGROUP"
+    ],
+    "normalized_text": "A200M 20OMGROUP",
+    "confidence": 0.997
+  },
+  "micro_differences_detected": [
+    "None detected; consistent with official reference"
+  ],
+  "threat_type": "EXACT_REPLICA",
+  "action_reason": "High-confidence multi-modal consensus confirming authentic official logo 'a200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.1).",
+  "candidate_brands": [
+    {
+      "brand_id": "a200m",
+      "siglip": 1.0,
+      "phash_dist": 0
+    },
+    {
+      "brand_id": "p200m",
+      "siglip": 0.9333,
+      "phash_dist": 32
+    },
+    {
+      "brand_id": "d200m",
+      "siglip": 0.9271,
+      "phash_dist": 17
+    },
+    {
+      "brand_id": "k200m",
+      "siglip": 0.922,
+      "phash_dist": 31
+    },
+    {
+      "brand_id": "b200m",
+      "siglip": 0.9151,
+      "phash_dist": 26
+    }
+  ],
+  "processing_time_sec": 2.22
+}

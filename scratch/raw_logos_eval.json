@@ -1,0 +1,889 @@
+{
+  "issues": [],
+  "all": [
+    {
+      "file": "a200m.png",
+      "expected_brand": "a200m",
+      "matched_brand": "a200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'a200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "asia100.webp",
+      "expected_brand": "asia100",
+      "matched_brand": "asia100",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.01,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'asia100' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "asia200.webp",
+      "expected_brand": "asia200",
+      "matched_brand": "asia200",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9997,
+      "dinov2": 1.0,
+      "delta_e": 0.04,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'asia200' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "asia300.webp",
+      "expected_brand": "asia300",
+      "matched_brand": "asia300",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9998,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'asia300' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "asia400.webp",
+      "expected_brand": "asia400",
+      "matched_brand": "asia400",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.01,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'asia400' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "b200m.png",
+      "expected_brand": "b200m",
+      "matched_brand": "b200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'b200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "bonaslot.png",
+      "expected_brand": "bonaslot",
+      "matched_brand": "bonaslot",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.03,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'bonaslot' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "c200m.png",
+      "expected_brand": "c200m",
+      "matched_brand": "c200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9999,
+      "dinov2": 1.0,
+      "delta_e": 0.14,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'c200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.1)."
+    },
+    {
+      "file": "d200m.webp",
+      "expected_brand": "d200m",
+      "matched_brand": "d200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.11,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'd200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.1)."
+    },
+    {
+      "file": "depo89.png",
+      "expected_brand": "depo89",
+      "matched_brand": "depo89",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'depo89' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "dewi11.gif",
+      "expected_brand": "dewi11",
+      "matched_brand": "dewi11",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.5,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'dewi11' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.5)."
+    },
+    {
+      "file": "e200m.png",
+      "expected_brand": "e200m",
+      "matched_brand": "e200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9998,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'e200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "f200m.png",
+      "expected_brand": "f200m",
+      "matched_brand": "f200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9998,
+      "dinov2": 1.0,
+      "delta_e": 0.07,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'f200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.1)."
+    },
+    {
+      "file": "fufuslot.png",
+      "expected_brand": "fufuslot",
+      "matched_brand": "fufuslot",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9996,
+      "dinov2": 1.0,
+      "delta_e": 0.5,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'fufuslot' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.5)."
+    },
+    {
+      "file": "g200m.png",
+      "expected_brand": "g200m",
+      "matched_brand": "g200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9997,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'g200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "hahasurga.png",
+      "expected_brand": "hahasurga",
+      "matched_brand": "hahasurga",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.01,
+      "edge_iou": 0.8484,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'hahasurga' (SigLIP=1.000, DINOv2=1.000, Edge IoU=0.848, Delta E=0.0)."
+    },
+    {
+      "file": "j200m.png",
+      "expected_brand": "j200m",
+      "matched_brand": "j200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9999,
+      "dinov2": 1.0,
+      "delta_e": 0.07,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'j200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.1)."
+    },
+    {
+      "file": "jagoledak.webp",
+      "expected_brand": "jagoledak",
+      "matched_brand": "jagoledak",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'jagoledak' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "jos007.webp",
+      "expected_brand": "jos007",
+      "matched_brand": "jos007",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9998,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'jos007' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "k200m.png",
+      "expected_brand": "k200m",
+      "matched_brand": "k200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.26,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'k200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.3)."
+    },
+    {
+      "file": "madura88.gif",
+      "expected_brand": "madura88",
+      "matched_brand": "madura88",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.5,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'madura88' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.5)."
+    },
+    {
+      "file": "mposurga.webp",
+      "expected_brand": "mposurga",
+      "matched_brand": "mposurga",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.5,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'mposurga' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.5)."
+    },
+    {
+      "file": "nusa211.png",
+      "expected_brand": "nusa211",
+      "matched_brand": "nusa211",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.08,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'nusa211' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.1)."
+    },
+    {
+      "file": "p200m.webp",
+      "expected_brand": "p200m",
+      "matched_brand": "p200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9999,
+      "dinov2": 1.0,
+      "delta_e": 0.02,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'p200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "paduka500.png",
+      "expected_brand": "paduka500",
+      "matched_brand": "paduka500",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'paduka500' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "pasti200m.png",
+      "expected_brand": "pasti200m",
+      "matched_brand": "pasti200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9997,
+      "dinov2": 1.0,
+      "delta_e": 0.16,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'pasti200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.2)."
+    },
+    {
+      "file": "raja100.png",
+      "expected_brand": "raja100",
+      "matched_brand": "raja100",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.17,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'raja100' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.2)."
+    },
+    {
+      "file": "sgcplay.webp",
+      "expected_brand": "sgcplay",
+      "matched_brand": "sgcplay",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.03,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'sgcplay' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "sgcvip.webp",
+      "expected_brand": "sgcvip",
+      "matched_brand": "sgcvip",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.05,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'sgcvip' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.1)."
+    },
+    {
+      "file": "sgcwin.png",
+      "expected_brand": "sgcwin",
+      "matched_brand": "sgcwin",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'sgcwin' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "sgcwin77.webp",
+      "expected_brand": "sgcwin77",
+      "matched_brand": "sgcwin77",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9996,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'sgcwin77' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "sgcwin88.webp",
+      "expected_brand": "sgcwin88",
+      "matched_brand": "sgcwin88",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.07,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'sgcwin88' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.1)."
+    },
+    {
+      "file": "super89.png",
+      "expected_brand": "super89",
+      "matched_brand": "super89",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.02,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'super89' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "surga11.webp",
+      "expected_brand": "surga11",
+      "matched_brand": "surga11",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9998,
+      "dinov2": 1.0,
+      "delta_e": 0.5,
+      "edge_iou": 0.8291,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surga11' (SigLIP=1.000, DINOv2=1.000, Edge IoU=0.829, Delta E=0.5)."
+    },
+    {
+      "file": "surga200m.png",
+      "expected_brand": "surga200m",
+      "matched_brand": "surga200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.05,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surga200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.1)."
+    },
+    {
+      "file": "surga22.webp",
+      "expected_brand": "surga22",
+      "matched_brand": "surga22",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.5,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surga22' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.5)."
+    },
+    {
+      "file": "surga33.webp",
+      "expected_brand": "surga33",
+      "matched_brand": "surga33",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9995,
+      "dinov2": 1.0,
+      "delta_e": 0.02,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surga33' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "surga5000.webp",
+      "expected_brand": "surga5000",
+      "matched_brand": "surga5000",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.13,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surga5000' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.1)."
+    },
+    {
+      "file": "surga55.webp",
+      "expected_brand": "surga55",
+      "matched_brand": "surga55",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.5,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surga55' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.5)."
+    },
+    {
+      "file": "surga77.webp",
+      "expected_brand": "surga77",
+      "matched_brand": "surga77",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.04,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surga77' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "surga88.webp",
+      "expected_brand": "surga88",
+      "matched_brand": "surga88",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.04,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surga88' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "surga99.webp",
+      "expected_brand": "surga99",
+      "matched_brand": "surga99",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9997,
+      "dinov2": 1.0,
+      "delta_e": 0.5,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surga99' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.5)."
+    },
+    {
+      "file": "surgagacor.webp",
+      "expected_brand": "surgagacor",
+      "matched_brand": "surgagacor",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.19,
+      "edge_iou": 0.8671,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surgagacor' (SigLIP=1.000, DINOv2=1.000, Edge IoU=0.867, Delta E=0.2)."
+    },
+    {
+      "file": "surgaplay.webp",
+      "expected_brand": "surgaplay",
+      "matched_brand": "surgaplay",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9997,
+      "dinov2": 1.0,
+      "delta_e": 0.03,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surgaplay' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "surgavip.webp",
+      "expected_brand": "surgavip",
+      "matched_brand": "surgavip",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.01,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surgavip' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "surgavip88.webp",
+      "expected_brand": "surgavip88",
+      "matched_brand": "surgavip88",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 0.9998,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'surgavip88' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "tiket100.webp",
+      "expected_brand": "tiket100",
+      "matched_brand": "tiket100",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.01,
+      "edge_iou": 0.7477,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'tiket100' (SigLIP=1.000, DINOv2=1.000, Edge IoU=0.748, Delta E=0.0)."
+    },
+    {
+      "file": "tiket200.webp",
+      "expected_brand": "tiket200",
+      "matched_brand": "tiket200",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.09,
+      "edge_iou": 0.7372,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'tiket200' (SigLIP=1.000, DINOv2=1.000, Edge IoU=0.737, Delta E=0.1)."
+    },
+    {
+      "file": "tiket300.webp",
+      "expected_brand": "tiket300",
+      "matched_brand": "tiket300",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.06,
+      "edge_iou": 0.761,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'tiket300' (SigLIP=1.000, DINOv2=1.000, Edge IoU=0.761, Delta E=0.1)."
+    },
+    {
+      "file": "top111.gif",
+      "expected_brand": "top111",
+      "matched_brand": "top111",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.17,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'top111' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.2)."
+    },
+    {
+      "file": "tri88.gif",
+      "expected_brand": "tri88",
+      "matched_brand": "tri88",
+      "verdict": "MATCH",
+      "threat_type": "AUTHENTIC_VARIANT",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.0,
+      "edge_iou": 1.0,
+      "ocr_match": false,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "Verified authentic visual variant of official brand 'tri88' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.0)."
+    },
+    {
+      "file": "y200m.png",
+      "expected_brand": "y200m",
+      "matched_brand": "y200m",
+      "verdict": "MATCH",
+      "threat_type": "EXACT_REPLICA",
+      "siglip": 1.0,
+      "dinov2": 1.0,
+      "delta_e": 0.5,
+      "edge_iou": 1.0,
+      "ocr_match": true,
+      "phash": 0,
+      "diffs": [
+        "None detected; consistent with official reference"
+      ],
+      "reason": "High-confidence multi-modal consensus confirming authentic official logo 'y200m' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.5)."
+    }
+  ]
+}

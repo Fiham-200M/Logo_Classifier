@@ -1,0 +1,71 @@
+{
+  "brand_id": "e200m",
+  "verdict": "REVIEW",
+  "confidence_score": 0.5904,
+  "asset_type": "logo",
+  "media_type": "logo",
+  "matched_reference": "logo_012_pos_bg_dark_gray_00.png",
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": true,
+    "width": 1600,
+    "height": 533
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 24,
+    "dhash_hamming_distance": 21,
+    "siglip2_semantic_score": 0.9104,
+    "dinov2_geometry_score": 0.7224,
+    "cielab_delta_e": 7.76,
+    "edge_stroke_iou": 0.3857,
+    "ocr_text_match": false,
+    "classifier_predicted_brand": "unknown",
+    "classifier_confidence": 0.5303,
+    "classifier_is_unknown": true,
+    "classifier_unknown_prob": 0.5303
+  },
+  "ocr": {
+    "detected_text": [
+      "200MGR0UP"
+    ],
+    "normalized_text": "200MGR0UP",
+    "confidence": 0.9933
+  },
+  "micro_differences_detected": [
+    "Color palette shift: CIE LAB Delta E = 7.8 (Histogram overlap = 0.09)",
+    "Typography / stroke geometry divergence: Edge stroke overlap (0.39) < 0.55",
+    "Structural edge injection: 104.4% new graphic strokes detected"
+  ],
+  "threat_type": "COLOR_SPOOF",
+  "action_reason": "Candidate logo structure matches 'e200m', but exhibits significant color drift (Delta E=7.8). Possible recolored spoof.",
+  "candidate_brands": [
+    {
+      "brand_id": "e200m",
+      "siglip": 0.9104,
+      "phash_dist": 24
+    },
+    {
+      "brand_id": "g200m",
+      "siglip": 0.817,
+      "phash_dist": 27
+    },
+    {
+      "brand_id": "k200m",
+      "siglip": 0.8133,
+      "phash_dist": 33
+    },
+    {
+      "brand_id": "f200m",
+      "siglip": 0.8124,
+      "phash_dist": 34
+    },
+    {
+      "brand_id": "p200m",
+      "siglip": 0.8004,
+      "phash_dist": 29
+    }
+  ],
+  "processing_time_sec": 76.798
+}

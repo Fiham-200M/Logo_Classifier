@@ -1,0 +1,15 @@
+SIGLIP 2 BRAND DATABASE VALIDATION
+======================================================================
+
+Total brands : 52
+Top-1       : 52/52 (100.00%)
+Top-3       : 52/52 (100.00%)
+Top-5       : 52/52 (100.00%)
+
+Average Top-1 similarity : 1.0000
+Minimum Top-1 similarity : 1.0000
+Maximum Top-1 similarity : 1.0000
+
+
+MISCLASSIFICATIONS
+======================================================================

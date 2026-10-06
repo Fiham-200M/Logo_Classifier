@@ -1,0 +1,62 @@
+{
+  "brand_id": "UNKNOWN",
+  "verdict": "UNKNOWN",
+  "confidence_score": 0.7351,
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": true,
+    "width": 200,
+    "height": 200
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 29,
+    "dhash_hamming_distance": 26,
+    "siglip2_semantic_score": 0.7351,
+    "dinov2_geometry_score": 0.324,
+    "cielab_delta_e": 68.66,
+    "edge_stroke_iou": 0.0,
+    "ocr_text_match": false
+  },
+  "ocr": {
+    "detected_text": [
+      "GOLD"
+    ],
+    "normalized_text": "GOLD",
+    "confidence": 0.9999
+  },
+  "micro_differences_detected": [
+    "No semantic or geometric relationship with protected brand"
+  ],
+  "threat_type": "UNRELATED",
+  "action_reason": "Insufficient evidence connecting image to brand 'top111' (SigLIP=0.735, DINOv2=0.324).",
+  "candidate_brands": [
+    {
+      "brand_id": "top111",
+      "siglip": 0.7351,
+      "phash_dist": 29
+    },
+    {
+      "brand_id": "sgcwin88",
+      "siglip": 0.5533,
+      "phash_dist": 30
+    },
+    {
+      "brand_id": "raja100",
+      "siglip": 0.5516,
+      "phash_dist": 27
+    },
+    {
+      "brand_id": "super89",
+      "siglip": 0.5504,
+      "phash_dist": 32
+    },
+    {
+      "brand_id": "c200m",
+      "siglip": 0.5424,
+      "phash_dist": 26
+    }
+  ],
+  "processing_time_sec": 1.222
+}

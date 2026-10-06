@@ -1,0 +1,124 @@
+# ============================================================
+# Anti-Phishing Brand Detection System — Configuration
+# ============================================================
+# All fusion weights, thresholds, model settings, and pipeline
+# parameters are centralized here.
+# Edit this file to tune the system without touching Python code.
+# ============================================================
+
+# ------------------------------------------------------------
+# MODEL CONFIGURATION
+# ------------------------------------------------------------
+model:
+  siglip_model_name: "google/siglip2-so400m-patch14-384"
+  siglip_ensemble_strategy: "max"     # max | weighted_top_k | mean_top_k
+  siglip_top_k_views: 3
+
+# Preprocessing views for multi-view visual ensemble
+preprocessing_views:
+  - "raw_rgb"
+  - "original"
+  - "resized"
+  - "square_padded"
+  - "center_crop"
+  - "contrast_enhanced"
+  - "white_bg"
+  - "black_bg"
+  - "sharpened"
+  - "grayscale"
+
+# Per-view fidelity weights (used with weighted_top_k strategy)
+view_weights:
+  raw_rgb: 1.0
+  original: 0.95
+  square_padded: 0.90
+  white_bg: 0.85
+  black_bg: 0.85
+  grayscale: 0.85
+  contrast_enhanced: 0.80
+  resized: 0.75
+  center_crop: 0.70
+  sharpened: 0.65
+
+# ------------------------------------------------------------
+# SCORE FUSION WEIGHTS
+# ------------------------------------------------------------
+# These weights control how much each signal contributes to
+# the final score. They are auto-normalized to sum to 1.0.
+fusion:
+  siglip_weight: 0.55
+  color_weight: 0.25
+  ocr_weight: 0.20
+  vlm_weight: 0.00         # VLM as scored signal (Phase 3)
+  structure_weight: 0.00    # Optional shape signal (disabled)
+
+# ------------------------------------------------------------
+# OCR SETTINGS
+# ------------------------------------------------------------
+ocr:
+  neutral_score: 0.50       # Score when no text is detected
+  min_confidence: 0.25      # Minimum OCR detection confidence
+  min_char_length: 2        # Minimum characters for valid text
+
+# ------------------------------------------------------------
+# DECISION THRESHOLDS
+# ------------------------------------------------------------
+# MATCH:   High score + strong margin → confident identification
+# REVIEW:  Moderate score or small margin → needs human review
+# UNKNOWN: Below review threshold → insufficient evidence
+decision:
+  match_score_threshold: 0.80
+  match_margin_threshold: 0.030
+  review_score_threshold: 0.65
+  review_margin_threshold: 0.010
+
+# Evidence-aware decision rules (Phase 5)
+# These define when specific evidence combinations are sufficient
+evidence_rules:
+  # Strong visual alone is enough to match (OCR failure ≠ rejection)
+  strong_visual_threshold: 0.85
+  strong_color_threshold: 0.80
+  strong_ocr_threshold: 0.80
+  # Conflicting signals trigger VLM verification
+  conflict_margin: 0.15     # |visual - ocr| > this → conflict
+
+# ------------------------------------------------------------
+# PROTECTED BRANDS (Zero False Negatives Target)
+# ------------------------------------------------------------
+protected_brands:
+  brands:
+    - "a200m"
+  score_threshold: 0.60
+  margin_threshold: 0.015
+  vlm_trigger_margin: 0.040
+
+# ------------------------------------------------------------
+# VLM CONFIGURATION
+# ------------------------------------------------------------
+vlm:
+  enabled: true              # VLM runs for every image
+  url: "http://localhost:11434/api/generate"
+  model: "qwen3.5:9b"
+  timeout_seconds: 45
+  ambiguity_margin: 0.025    # Trigger VLM if top1-top2 < this
+  top_candidates: 4          # Candidates passed to VLM prompt
+
+# ------------------------------------------------------------
+# MULTI-STAGE PIPELINE (Phase 6)
+# ------------------------------------------------------------
+pipeline:
+  # Stage 1 fast-path: skip OCR+VLM if visual match is very strong
+  fast_path_score: 0.92
+  fast_path_margin: 0.08
+  # Stage 3: conditions to trigger VLM
+  vlm_trigger_on_disagreement: true
+  vlm_trigger_on_ambiguity: true
+  vlm_trigger_on_protected: true
+
+# ------------------------------------------------------------
+# LOGGING
+# ------------------------------------------------------------
+logging:
+  level: "INFO"              # DEBUG | INFO | WARNING
+  per_image_breakdown: true
+  log_file: null             # null = stdout only

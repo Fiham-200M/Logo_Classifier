@@ -1,0 +1,62 @@
+{
+  "brand_id": "UNKNOWN",
+  "verdict": "UNKNOWN",
+  "confidence_score": 0.6225,
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": false,
+    "width": 320,
+    "height": 80
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 27,
+    "dhash_hamming_distance": 20,
+    "siglip2_semantic_score": 0.6225,
+    "dinov2_geometry_score": 0.4023,
+    "cielab_delta_e": 99.78,
+    "edge_stroke_iou": 0.1097,
+    "ocr_text_match": false
+  },
+  "ocr": {
+    "detected_text": [
+      "GLOBAL BANKING CORP"
+    ],
+    "normalized_text": "GLOBALBANKINGCORP",
+    "confidence": 0.9988
+  },
+  "micro_differences_detected": [
+    "No semantic or geometric relationship with protected brand"
+  ],
+  "threat_type": "UNRELATED",
+  "action_reason": "Insufficient evidence connecting image to brand 'sgcwin' (SigLIP=0.623, DINOv2=0.402).",
+  "candidate_brands": [
+    {
+      "brand_id": "sgcwin",
+      "siglip": 0.6225,
+      "phash_dist": 27
+    },
+    {
+      "brand_id": "sgcvip",
+      "siglip": 0.6173,
+      "phash_dist": 29
+    },
+    {
+      "brand_id": "top111",
+      "siglip": 0.6121,
+      "phash_dist": 31
+    },
+    {
+      "brand_id": "sgcplay",
+      "siglip": 0.6119,
+      "phash_dist": 32
+    },
+    {
+      "brand_id": "sgcwin77",
+      "siglip": 0.6091,
+      "phash_dist": 32
+    }
+  ],
+  "processing_time_sec": 0.927
+}

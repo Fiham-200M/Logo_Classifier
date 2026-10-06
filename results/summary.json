@@ -1,0 +1,14 @@
+{
+  "total_images": 46,
+  "verdict_counts": {
+    "MATCH": 45,
+    "REVIEW": 1,
+    "UNKNOWN": 0
+  },
+  "threat_counts": {
+    "EXACT_REPLICA": 45,
+    "ELEMENT_INJECTION": 1
+  },
+  "total_time_seconds": 50.444,
+  "avg_time_per_image": 1.097
+}

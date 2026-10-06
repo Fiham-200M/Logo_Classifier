@@ -1,0 +1,62 @@
+{
+  "brand_id": "bonaslot",
+  "verdict": "MATCH",
+  "confidence_score": 0.95,
+  "asset_type": "favicon",
+  "matched_reference": "007_bonaslot-2026.website_favicon.png",
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": false,
+    "width": 32,
+    "height": 32
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 0,
+    "dhash_hamming_distance": 0,
+    "siglip2_semantic_score": 1.0,
+    "dinov2_geometry_score": 1.0,
+    "cielab_delta_e": 0.5,
+    "edge_stroke_iou": 1.0,
+    "ocr_text_match": false
+  },
+  "ocr": {
+    "detected_text": [],
+    "normalized_text": "",
+    "confidence": 0.0
+  },
+  "micro_differences_detected": [
+    "None detected; consistent with official reference"
+  ],
+  "threat_type": "EXACT_REPLICA",
+  "action_reason": "High-confidence multi-modal consensus confirming authentic official favicon 'bonaslot' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.5).",
+  "candidate_brands": [
+    {
+      "brand_id": "bonaslot",
+      "siglip": 1.0,
+      "phash_dist": 0
+    },
+    {
+      "brand_id": "b200m",
+      "siglip": 0.9197,
+      "phash_dist": 28
+    },
+    {
+      "brand_id": "p200m",
+      "siglip": 0.8141,
+      "phash_dist": 26
+    },
+    {
+      "brand_id": "d200m",
+      "siglip": 0.8055,
+      "phash_dist": 26
+    },
+    {
+      "brand_id": "j200m",
+      "siglip": 0.7869,
+      "phash_dist": 31
+    }
+  ],
+  "processing_time_sec": 0.354
+}

@@ -1,0 +1,64 @@
+{
+  "brand_id": "tiket200",
+  "verdict": "MATCH",
+  "confidence_score": 1.0,
+  "asset_type": "favicon",
+  "matched_reference": "045_tiket200-nov.lol_favicon.png",
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": true,
+    "width": 60,
+    "height": 60
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 0,
+    "dhash_hamming_distance": 0,
+    "siglip2_semantic_score": 1.0,
+    "dinov2_geometry_score": 1.0,
+    "cielab_delta_e": 0.08,
+    "edge_stroke_iou": 1.0,
+    "ocr_text_match": true
+  },
+  "ocr": {
+    "detected_text": [
+      "200"
+    ],
+    "normalized_text": "200",
+    "confidence": 0.9999
+  },
+  "micro_differences_detected": [
+    "None detected; consistent with official reference"
+  ],
+  "threat_type": "EXACT_REPLICA",
+  "action_reason": "High-confidence multi-modal consensus confirming authentic official favicon 'tiket200' (SigLIP=1.000, DINOv2=1.000, Edge IoU=1.000, Delta E=0.1).",
+  "candidate_brands": [
+    {
+      "brand_id": "tiket200",
+      "siglip": 1.0,
+      "phash_dist": 0
+    },
+    {
+      "brand_id": "tiket300",
+      "siglip": 0.9366,
+      "phash_dist": 4
+    },
+    {
+      "brand_id": "tiket100",
+      "siglip": 0.9104,
+      "phash_dist": 14
+    },
+    {
+      "brand_id": "f200m",
+      "siglip": 0.7953,
+      "phash_dist": 34
+    },
+    {
+      "brand_id": "top111",
+      "siglip": 0.7697,
+      "phash_dist": 28
+    }
+  ],
+  "processing_time_sec": 0.599
+}

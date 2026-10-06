@@ -1,0 +1,62 @@
+{
+  "brand_id": "UNKNOWN",
+  "verdict": "UNKNOWN",
+  "confidence_score": 0.5632,
+  "preprocessing_meta": {
+    "file_format": "PNG",
+    "is_animated": false,
+    "frames_processed": 1,
+    "alpha_channel_detected": false,
+    "width": 300,
+    "height": 300
+  },
+  "forensic_metrics": {
+    "phash_hamming_distance": 33,
+    "dhash_hamming_distance": 29,
+    "siglip2_semantic_score": 0.5632,
+    "dinov2_geometry_score": 0.1918,
+    "cielab_delta_e": 93.19,
+    "edge_stroke_iou": 0.0,
+    "ocr_text_match": false
+  },
+  "ocr": {
+    "detected_text": [
+      "ACME CORP"
+    ],
+    "normalized_text": "ACMECORP",
+    "confidence": 0.9955
+  },
+  "micro_differences_detected": [
+    "No semantic or geometric relationship with protected brand"
+  ],
+  "threat_type": "UNRELATED",
+  "action_reason": "Insufficient evidence connecting image to brand 'top111' (SigLIP=0.563, DINOv2=0.192).",
+  "candidate_brands": [
+    {
+      "brand_id": "top111",
+      "siglip": 0.5632,
+      "phash_dist": 33
+    },
+    {
+      "brand_id": "c200m",
+      "siglip": 0.5101,
+      "phash_dist": 36
+    },
+    {
+      "brand_id": "e200m",
+      "siglip": 0.5028,
+      "phash_dist": 28
+    },
+    {
+      "brand_id": "jos007",
+      "siglip": 0.5018,
+      "phash_dist": 33
+    },
+    {
+      "brand_id": "a200m",
+      "siglip": 0.4994,
+      "phash_dist": 34
+    }
+  ],
+  "processing_time_sec": 2.222
+}

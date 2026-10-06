@@ -1,0 +1,31 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.swp
+*.swo
+*~
+
+# Virtual Environments
+.venv/
+.venv-*/
+venv/
+ENV/
+env/
+
+# Server Runtime & Temporary Uploads
+debug/uploads/*
+!debug/uploads/.gitkeep
+scratch_ocr_query_*.png
+*.log
+
+# Large reference cache files (>100MB limit on GitHub, rebuilt via build_siglip_reference_database.py)
+*forensic_reference_store.pt
+
+# OS & IDE Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
